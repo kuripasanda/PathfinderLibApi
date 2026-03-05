@@ -9,6 +9,6 @@ repositories {
 }
 
 dependencies {
-    implementation("com.github.kuripasanda:PathfinderLibApi:1.0.0")
+    implementation("com.github.kuripasanda:PathfinderLibApi:1.0.0-beta")
 }
 ```
