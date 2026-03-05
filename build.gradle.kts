@@ -1,9 +1,9 @@
 import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 
 plugins {
+    id("maven-publish")
     kotlin("jvm") version "2.3.10"
     kotlin("plugin.serialization") version "2.3.10"
-    id("maven-publish")
 }
 
 group = "com.github.kuripasanda"
@@ -30,4 +30,13 @@ kotlin {
 java {
     sourceCompatibility = JavaVersion.VERSION_21
     targetCompatibility = JavaVersion.VERSION_21
+}
+
+publishing {
+    publications {
+        create<MavenPublication>("maven") {
+            artifactId = base.archivesName.get()
+            from(components["kotlin"])
+        }
+    }
 }
