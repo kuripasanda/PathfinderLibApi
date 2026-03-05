@@ -7,7 +7,7 @@ plugins {
 }
 
 group = "com.github.kuripasanda"
-version = "SNAPSHOT"
+version = "1.0.0-beta"
 
 repositories {
     mavenCentral()
