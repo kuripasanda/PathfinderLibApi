@@ -9,7 +9,7 @@ repositories {
 }
 
 dependencies {
-    implementation("com.github.kuripasanda:pathfinderlib-api:1.0.3")
+    compileOnly("com.github.kuripasanda:pathfinderlib-api:1.0.3")
 }
 ```
   
