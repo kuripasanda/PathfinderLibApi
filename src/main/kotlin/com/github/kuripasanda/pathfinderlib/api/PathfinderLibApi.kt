@@ -10,6 +10,17 @@ interface PathfinderLibApi {
 
     companion object {
         val MOD_ID = "pathfinderlib"
+
+        var instance: PathfinderLibApi? = null
+
+        /**
+         * PathfinderLib APIのインスタンスを取得します。
+         * @return PathfinderLib APIのインスタンス
+         * @throws IllegalStateException PathfinderLib APIが初期化されていない場合
+         */
+        fun getApi(): PathfinderLibApi {
+            return instance ?: throw IllegalStateException("PathfinderLib APIが初期化されていません。")
+        }
     }
 
     /** A*アルゴリズムを使用してパスを見つけるためのパスファインダを取得します。 */
